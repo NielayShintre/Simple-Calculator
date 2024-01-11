@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Assignment 4</title>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <style>
+      * {
+        padding: 0;
+        margin: 0;
+        font-family: "Poppins";
+        text-decoration: none;
+        box-sizing: border-box;
+      }
+
+      .main {
+        text-align: center;
+        background-color: #F9ECEB;
+        height: 100vh;
+      }
+
+      .main h2 {
+        display: inline-block;
+        margin-top: 10px;
+      }
+      
+
+      .calculator {
+        width: 450px;
+        height: 550px;
+        position: relative;
+        left: 470px;
+        top: 40px;
+        border-radius: 20px;
+        box-shadow: 5px 3px 37px 6px rgba(77,62,62,1);
+        /* border: 1px solid; */
+      }
+
+      .input {
+        position: absolute;
+        top: 30px;
+        left: 50px;
+      }
+
+      input {
+        height: 40px;
+        padding: 5px;
+        border: 2px solid #FFB0A3;
+      }
+
+      .btn {
+        position: absolute;
+        width: 350px;
+        top: 90px;
+        left: 50px;
+        display: flex;
+        align-items: center;
+        flex-direction: column;
+        /* border: 1px solid; */
+      }
+
+      button {
+        margin: 5px;
+        width: 150px;
+        height: 30px;
+        background-color: #FFB5A7;
+        border: none;
+        transition: all .2s ease-in-out;
+      }
+
+      button:hover {
+        background-color: #e0938d;
+      }
+
+      .result {
+        position: absolute;
+        text-align: center;
+        width: 250px;
+        height: 150px;
+        bottom: 20px;
+        left: 100px;
+        border: 1px solid #d08b7d;
+      }
+      
+    </style>
+
+    <div class="main">
+        <h2>Simple Calculator🧮</h2>
+      <div class="calculator">
+        <div class="input">
+          <input id="input1" type="number" placeholder="Enter Number 1" />
+          <input id="input2" type="number" placeholder="Enter Number 2" />
+        </div>
+
+        <div class="btn">
+            <button onclick="add()">Addition</button>
+            <button onclick="sub()">Substraction</button>
+            <button onclick="mul()">Multiplication</button>
+            <button onclick="div()">Division</button>
+            <button onclick="exp()">Exponential</button>
+            <button onclick="rem()">Remainder</button>
+            <button onclick="reset()">Reset</button>
+        </div>
+
+        <div class="result">
+            <p>Result: <br><span id="res"></span></p>
+        </div>
+
+
+      </div>
+    </div>
+
+    <script src="assignment4.js"></script>
+  </body>
+</html>
